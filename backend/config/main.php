@@ -12,7 +12,10 @@ return [
     'modules' => [
         'personal' => [
             'class' => 'backend\modules\personal\Module',
-        ],
+        ],  /* module Personal > End*/
+        'meeting' => [
+            'class' => 'backend\modules\meeting\Module',
+        ],  /* module Meeting > End*/
     ],
     'components' => [
         'user' => [

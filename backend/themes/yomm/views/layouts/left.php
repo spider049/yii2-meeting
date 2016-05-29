@@ -36,22 +36,43 @@
                         'icon' => 'fa fa-file-code-o', 
                         'url' => ['#'],
                         'items' => [
-                            ['label' => 'บุคลากร', 'icon' => 'fa fa-file-code-o', 'url' => ['#'],
+                            ['label' => 'บุคลากร', 'icon' => 'glyphicon glyphicon-minus', 'url' => ['#'],
                                 'items' => [
                                     ['label' => 'ข้อมูลบุคลากร', 'icon' => 'fa fa-file-code-o', 'url' => ['/personal/person/index']],
                                     ['label' => 'เพิ่มบุคลากร', 'icon' => 'glyphicon glyphicon-plus', 'url' => ['/personal/person/create']],
                                 ],
                             ],
-                            ['label' => 'ห้องประชุม', 'icon' => 'fa fa-file-code-o', 'url' => ['#'],
+                            ['label' => 'ห้องประชุม', 'icon' => 'glyphicon glyphicon-minus', 'url' => ['#'],
                                 'items' => [
-                                    ['label' => 'ข้อมูลห้อง', 'icon' => 'fa fa-file-code-o', 'url' => ['/personal/room/index']],
-                                    ['label' => 'เพิ่มห้อง', 'icon' => 'glyphicon glyphicon-plus', 'url' => ['/personal/room/create']],
+                                    ['label' => 'ข้อมูลห้อง', 'icon' => 'fa fa-file-code-o', 'url' => ['/meeting/room/index']],
+                                    ['label' => 'เพิ่มห้อง', 'icon' => 'glyphicon glyphicon-plus', 'url' => ['/meeting/room/create']],
                                 ],
                             ],
-                            ['label' => 'อุปกรณ์', 'icon' => 'fa fa-file-code-o', 'url' => ['#'],
+                            ['label' => 'อุปกรณ์', 'icon' => 'glyphicon glyphicon-minus', 'url' => ['#'],
                                 'items' => [
                                     ['label' => 'ข้อมูลอุปกรณ์', 'icon' => 'fa fa-file-code-o', 'url' => ['/personal/equipment/index']],
                                     ['label' => 'เพิ่มอุปกรณ์', 'icon' => 'glyphicon glyphicon-plus', 'url' => ['/personal/equipment/create']],
+                                ],
+                            ],
+                            
+                        ],
+                    ],
+                    
+                    [
+                        'label' => 'Modules List', 
+                        'icon' => 'glyphicon glyphicon-briefcase', 
+                        'url' => ['#'],
+                        'items' => [
+                            ['label' => 'Personal module', 'icon' => 'glyphicon glyphicon-minus', 'url' => ['#'],
+                                'items' => [
+                                    ['label' => 'Person Controller', 'icon' => 'fa fa-file-code-o', 'url' => ['/personal/person/']],
+                                    
+                                ],
+                            ],
+                            ['label' => 'Meeting module', 'icon' => 'glyphicon glyphicon-minus', 'url' => ['#'],
+                                'items' => [
+                                    ['label' => 'Room Controller', 'icon' => 'fa fa-file-code-o', 'url' => ['/meeting/room/']],
+                                    
                                 ],
                             ],
                             

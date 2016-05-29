@@ -1,5 +1,6 @@
 <div class="personal-default-index">
     <h1><?= $this->context->action->uniqueId ?></h1>
+    <h2>หน้าแรกของ Module Personal</h2>
     <p>
         This is the view content for action "<?= $this->context->action->id ?>".
         The action belongs to the controller "<?= get_class($this->context) ?>"

@@ -7,6 +7,10 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
 
+use common\models\User;
+
+
+
 /**
  * Site controller
  */
@@ -55,7 +59,9 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        return $this->render('index');
+        return $this->render('index', [
+            'user' => $user,
+        ]);
     }
 
     public function actionLogin()

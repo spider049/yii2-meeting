@@ -48,7 +48,7 @@ return [
                     '@app/views' => '@backend/themes/yomm/views'
                 ],
             ],
-        ],
+        ],       
     ],
     'params' => $params,
 ];

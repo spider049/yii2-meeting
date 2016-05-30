@@ -39,7 +39,7 @@ use dmstr\widgets\Alert;
     <div class="pull-right hidden-xs">
         <b>Version</b> 2.0
     </div>
-    <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
+    <strong>Copyright &copy; 2014-2015 <a href="https://www.facebook.com/payom.deemad">Payom Deemed</a>.</strong> All rights
     reserved.
 </footer>
 
@@ -50,15 +50,16 @@ use dmstr\widgets\Alert;
         <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
         <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
     </ul>
+    
     <!-- Tab panes -->
     <div class="tab-content">
         <!-- Home tab content -->
         <div class="tab-pane" id="control-sidebar-home-tab">
-            <h3 class="control-sidebar-heading">Recent Activity</h3>
+            <h3 class="control-sidebar-heading">Recent ทดสอบ</h3>
             <ul class='control-sidebar-menu'>
                 <li>
                     <a href='javascript::;'>
-                        <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+                        <i class="menu-icon fa fa-birthday-cake bg-red-active"></i>
 
                         <div class="menu-info">
                             <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
@@ -162,7 +163,7 @@ use dmstr\widgets\Alert;
         <!-- Settings tab content -->
         <div class="tab-pane" id="control-sidebar-settings-tab">
             <form method="post">
-                <h3 class="control-sidebar-heading">General Settings</h3>
+                <h3 class="control-sidebar-heading">ตั้งค่าทั่วไป</h3>
 
                 <div class="form-group">
                     <label class="control-sidebar-subheading">

@@ -1,6 +1,5 @@
 <?PHP
 
-use common\models\User;
 use yii\helpers\Html;
 ?>
 
@@ -16,15 +15,14 @@ use yii\helpers\Html;
                 <img src="<?= $directoryAsset ?>/img/user-mali-sahawong.jpg" class="img-circle" alt="User Image"/>
             </div>
             <div class="pull-left info">
-                <p>
-                    พยอม ดีเม็ด
+                
+                <p>  <!-- แสดงชื่อผู้ใช้ที่ Login เข้ามาในระบบ -->                
+                    <?= Html::encode(Yii::$app->user->identity->username) ?> 
+                    
                 </p>
 
-                    <a 
-                        href="https://www.facebook.com/payom.deemad">
-                        <i class="fa fa-circle text-success">                        
-                        </i> Online
-                    </a>
+                <a href="https://www.facebook.com/payom.deemad">
+                    <i class="fa fa-circle text-success"></i> Online </a>
             </div>
         </div>
 

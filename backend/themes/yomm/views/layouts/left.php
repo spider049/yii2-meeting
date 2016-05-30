@@ -18,7 +18,7 @@ use yii\helpers\Html;
                 
                 <p>  <!-- แสดงชื่อผู้ใช้ที่ Login เข้ามาในระบบ -->                
                     <?= Html::encode(Yii::$app->user->identity->username) ?> 
-                    
+                    <!-- <?= Html::encode(Yii::$app->user->identity->email) ?> -->
                 </p>
 
                 <a href="https://www.facebook.com/payom.deemad">

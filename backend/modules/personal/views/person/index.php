@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="box box-success box-solid">
     <div class="box-header">
-        <h3 class="box-title"><i class="fa fa-users"></i><?= Html::encode($this->title) ?></h3>
+        <h3 class="box-title"><i class="fa fa-users"></i> รายชื่อบุคลากร ทั้งหมด</h3>
     </div>
     <div class="box-body">
 

@@ -60,21 +60,20 @@ class EquipmentController extends Controller {
      * @return mixed
      */
     public function actionCreate() {
-        $model = new Equipment();
+        $model = new Equipment();        
 
         if ($model->load(Yii::$app->request->post())) {
             $file = UploadedFile::getInstance($model, 'equip_img');
 
             if ($file->size != 0) {
-                $model->photo = $model->equipment.'.'.$file->extension;
-                $file->saveAs('uploads/equipment/'.$model->equipment.'.'. $file->extension);
-            }
+                $model->photo = $model->equipment.'-'.$file->size.'.'.$file->extension;
+                $file->saveAs('uploads/equipment/'.$model->equipment.'-'.$file->size.'.'.$file->extension);            }
 
             $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
-                        'model' => $model,
+                        'model' => $model,                       
             ]);
         }
     }
@@ -87,19 +86,20 @@ class EquipmentController extends Controller {
      */
     public function actionUpdate($id) {
         $model = $this->findModel($id);
+       
 
         if ($model->load(Yii::$app->request->post())) {
             $file = UploadedFile::getInstance($model, 'equip_img');
             if (isset($file->size) && $file->size != 0) {
-                $model->photo = $model->equipment.'.'.$file->extension;
-                $file->saveAs('uploads/equipment/'.$model->equipment.'.'. $file->extension);
+                $model->photo = $model->equipment.'-'.$file->size.'.'.$file->extension;
+                $file->saveAs('uploads/equipment/'.$model->equipment.'-'.$file->size.'.'.$file->extension);
             }
 
             $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
-                        'model' => $model,
+                        'model' => $model,                       
             ]);
         }
     }

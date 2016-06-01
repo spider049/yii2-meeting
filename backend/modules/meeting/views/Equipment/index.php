@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="box box-danger box-solid">
     <div class="box-header">
-        <h3 class="box-title"><i class="fa fa-cogs"></i><?= Html::encode($this->title) ?></h3>
+        <h3 class="box-title"><i class="fa fa-cogs"></i> รายการอุปกรณ์ทั้งหมด</h3>
     </div>
     <div class="box-body">
         <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

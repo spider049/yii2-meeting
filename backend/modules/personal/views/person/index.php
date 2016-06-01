@@ -36,8 +36,16 @@ $this->params['breadcrumbs'][] = $this->title;
                         return Html::img('uploads/person/'.$model->photo, ['class' => 'img-responsive', 'width'=>150]);
                     }
                 ],
-                'user.username',
-                'firstname',
+                //'user.username',
+                //'firstname',
+                        [
+                    'attribute' => 'firstname',
+                    'format' => 'html',
+                    'value' => function ($model) {
+                        return Html::a($model->firstname, $url = ['view', 'id' => $model->user_id]);
+                    }
+                ],
+                        
                 'lastname',
                 //'address:ntext',
                 'tel',

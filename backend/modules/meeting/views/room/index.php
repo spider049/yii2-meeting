@@ -34,7 +34,14 @@ $this->params['breadcrumbs'][] = $this->title;
                         return Html::img('uploads/room/'.$model->photo, ['class' => 'img-responsive', 'width' =>250]);
                     },
                 ],
-                'name',
+                //'name',
+                [
+                    'attribute' => 'name',
+                    'format' => 'html',
+                    'value' => function ($model) {
+                        return Html::a($model->name, $url = ['view', 'id' => $model->id]);
+                    }
+                ],
                 //'description:ntext',
                 //'photo',
                 //'color',

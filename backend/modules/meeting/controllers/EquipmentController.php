@@ -10,6 +10,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
 
+
 /**
  * EquipmentController implements the CRUD actions for Equipment model.
  */
@@ -54,26 +55,32 @@ class EquipmentController extends Controller {
         ]);
     }
 
+    public function actionTest() {
+        
+        return $this->redirect('http://www.facebook.com');
+    }
+
     /**
      * Creates a new Equipment model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate() {
-        $model = new Equipment();        
+        $model = new Equipment();
 
         if ($model->load(Yii::$app->request->post())) {
             $file = UploadedFile::getInstance($model, 'equip_img');
 
             if ($file->size != 0) {
-                $model->photo = $model->equipment.'-'.$file->size.'.'.$file->extension;
-                $file->saveAs('uploads/equipment/'.$model->equipment.'-'.$file->size.'.'.$file->extension);            }
+                $model->photo = $model->equipment . '-' . $file->size . '.' . $file->extension;
+                $file->saveAs('uploads/equipment/' . $model->equipment . '-' . $file->size . '.' . $file->extension);
+            }
 
             $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
-                        'model' => $model,                       
+                        'model' => $model,
             ]);
         }
     }
@@ -86,20 +93,20 @@ class EquipmentController extends Controller {
      */
     public function actionUpdate($id) {
         $model = $this->findModel($id);
-       
+
 
         if ($model->load(Yii::$app->request->post())) {
             $file = UploadedFile::getInstance($model, 'equip_img');
             if (isset($file->size) && $file->size != 0) {
-                $model->photo = $model->equipment.'-'.$file->size.'.'.$file->extension;
-                $file->saveAs('uploads/equipment/'.$model->equipment.'-'.$file->size.'.'.$file->extension);
+                $model->photo = $model->equipment . '-' . $file->size . '.' . $file->extension;
+                $file->saveAs('uploads/equipment/' . $model->equipment . '-' . $file->size . '.' . $file->extension);
             }
 
             $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
-                        'model' => $model,                       
+                        'model' => $model,
             ]);
         }
     }
